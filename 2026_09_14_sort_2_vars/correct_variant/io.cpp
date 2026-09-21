@@ -3,5 +3,9 @@
 #include <iostream>
 
 void biv::print_array(const char* const comment, int* arr, const int size) {
-	// TODO
+	std::cout << comment << '\n';
+	for (int i = 0; i < size; i += 1) {
+        std::cout << arr[i] << " ";
+    std::cout << ' ';
+	}
 }
