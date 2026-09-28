@@ -2,6 +2,7 @@
 using namespace std;
 
 void my_sort(int *arr, const int size);
+void print_array(int *arr, const int size);
 
 int main() {
     int size_;
@@ -16,15 +17,12 @@ int main() {
         mas[i] = el;
     }
     cout << "Изначальный массив: ";
-    for (int i=1; i<=size_; i+=1) {
-        cout << mas[i - 1] << ' ';
-    }
-    cout << '\n';
+    print_array(mas, size_);
+
     my_sort(mas, size_);
-    cout << "Отсортированный массив: ";
-    for (int i=0; i<size_; i+=1) {
-        cout << mas[i] << ' ';
-    }
+
+    cout << "Отсортированный массив";
+    print_array(mas, size_);
     delete[] mas;
     return 0;
 }
@@ -37,4 +35,11 @@ void my_sort(int *arr, const int size) {
             }
         }
     }
+}
+
+void print_array(int *arr, const int size) {
+    for (int i=0; i<size; i++) {
+        cout << arr[i] << ' ';
+    }
+    cout << endl;
 }
